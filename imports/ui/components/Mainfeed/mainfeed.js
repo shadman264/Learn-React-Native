@@ -1,37 +1,67 @@
 import React, { Component } from 'react';
-import {
-    AppRegistry,
-    View
-} from 'react-native';
+import { AppRegistry, View, BackHandler, TouchableOpacity} from 'react-native';
 import { Container, Content, Header, Body, Right, Button, Icon, Title, Card, CardItem, Text } from 'native-base';
 import Feedcard from '../Feedcard/feedcard';
+import Sound from 'react-native-sound';
 
-export default class LearnReactNative extends Component {
-
+export default class mainfeed extends Component {
+    
     static navigationOptions = {
         header: null
     };
 
     constructor(props) {
         super(props);
+        this.state = {
+            mainfeed: false
+        };
+        let bgmusic = new Sound('bgmusic2.mp3', Sound.MAIN_BUNDLE, (error) => {
+            if (error)
+                return;
+            bgmusic.play();
+            bgmusic.setNumberOfLoops(-1);
+        });
+        this.handle_bgMusic = (() => {
+            bgmusic.stop();
+            //return false; //close the app
+        }).bind(this) //don't forget bind this, you will remember anyway.
 
+    }
+
+    handleNavigation(){
+        this.handle_bgMusic();
+        console.log('touched');
+    }
+
+    componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', this.handle_bgMusic);
+    }
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress', this.handle_bgMusic);
     }
 
     render() {
         const { navigate } = this.props.navigation;
-        return (
-            <Container style={{marginBottom: '2%'}}>
-                <Header backgroundColor='#29B6F6' androidStatusBarColor='#039BE5'>
-                    <Button transparent><Icon name='menu' /></Button>
-                    <Body>
-                        <Title style={{paddingLeft: '7%'}}>
-                            Learn React Native
-                        </Title>
-                    </Body>
-                    <Right />                    
-                </Header>
+
+        let bodyContent = 
+            <Content style={{padding: '2%'}}>
+                <View style={{ flex: 1, flexDirection: "row", justifyContent: 'center', alignItems: 'center', paddingTop: '60%'}}>
+                    <Button style={{borderRadius: 8, backgroundColor: '#1976D2'}} onPress={() => {
+                            this.setState({
+                                mainfeed: true
+                            })
+                        }
+                    }>
+                        <Text> Get Started !! </Text>
+                    </Button>    
+                </View>                                                        
+            </Content>
+        let that = this;
+        if(this.state.mainfeed){
+            bodyContent = 
                 <Content style={{padding: '2%'}}>
-                    <Feedcard title1='0. Getting Started' title2='1. Learn the Basics' color1='unlocked' color2='unlocked'/>
+                    <Feedcard title1='0. Getting Started' title2='1. Learn the Basics' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='2. Props' title2='3. State' color1='unlocked' color2='locked'/>
                     <Feedcard title1='4. Style' title2='5. Height and Width' color1='locked' color2='locked'/>
                     <Feedcard title1='6. Flexbox' title2='7. ListView' color1='locked' color2='locked'/>
@@ -50,11 +80,21 @@ export default class LearnReactNative extends Component {
                     <Feedcard title1='32. Spinner' title2='33. Swipable List' color1='locked' color2='locked'/>
                     <Feedcard title1='34. Tabs' title2='35. Thumbnail' color1='locked' color2='locked'/>
                     <Feedcard title1='36. Toast' title2='37. Typography' color1='locked' color2='locked'/>
-                    <Feedcard title1='38. Navigation' title2='39. Drawer' color1='locked' color2='locked'/>                    
+                    <Feedcard title1='38. Navigation' title2='39. Drawer' color1='locked' color2='locked'/>
                 </Content>
-                
-
-                
+        }
+        return (
+            <Container style={{marginBottom: '2%'}}>
+                <Header androidStatusBarColor='#039BE5' style={{backgroundColor:'#29B6F6'}} >
+                    <Button transparent><Icon name='menu' /></Button>
+                    <Body>
+                        <Title style={{paddingLeft: '7%'}}>
+                            Learn React Native
+                        </Title>
+                    </Body>
+                    <Right />                    
+                </Header>
+                {bodyContent}                
             </Container>
         );
     }
