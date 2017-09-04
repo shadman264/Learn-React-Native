@@ -13,8 +13,15 @@ export default class LearnReactNative extends Component {
         super(props);
 
     }
-    handleClick = () => {
-        this.props.pressFunc();
+    handleClick = (color, title) => {
+        title = title.replace(/[0-9]/g, "");
+        title = title.substring(2);
+        title = title.replace(/\s/g, "_");
+        console.log("TITLE IS "+title);
+        if(color=='white')
+            this.props.pressFunc(title);
+        else
+            return;
     }
 
     render() {
@@ -38,7 +45,7 @@ export default class LearnReactNative extends Component {
                 <View style={{ flex: 1, flexDirection: "row", justifyContent: 'flex-start', alignItems: 'flex-start'}}>
                     <View style={{ flex: 1, flexDirection: "row", justifyContent: 'flex-start', alignItems: 'flex-start', marginRight:'1%'}}>
                         <Card style={{backgroundColor:color1}}>
-                            <TouchableOpacity onPress={this.handleClick.bind(this)}>
+                            <TouchableOpacity onPress={this.handleClick.bind(this, color1, this.props.title1)}>
                                 <Content scrollEnabled={ false } style={{height: 180}}>
                                     <View style={{flex: 1, flexDirection: "row", justifyContent: 'center', alignItems: 'flex-start', paddingTop:'7%',paddingBottom: 65}}>
                                         <Thumbnail source={require('./../../../assets/images/reactLogo.png')} />
@@ -54,7 +61,7 @@ export default class LearnReactNative extends Component {
                     </View>
                     <View style={{ flex: 1, flexDirection: "row", justifyContent: 'flex-start', alignItems: 'flex-start'}}>
                         <Card style={{backgroundColor:color2}}>
-                            <TouchableOpacity onPress={this.handleClick.bind(this)}>
+                            <TouchableOpacity onPress={this.handleClick.bind(this, color2, this.props.title2)}>
                                 <Content scrollEnabled={ false } style={{height: 180}}>
                                     <View style={{flex: 1, flexDirection: "row", justifyContent: 'center', alignItems: 'flex-start', paddingTop:'7%',paddingBottom: 65}}>
                                         <Thumbnail source={require('./../../../assets/images/reactLogo.png')} />
