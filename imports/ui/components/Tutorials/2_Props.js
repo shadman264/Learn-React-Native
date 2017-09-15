@@ -45,8 +45,34 @@ export default class Props extends Component {
                             </View>
                             <View style={{ flex: 1, flexDirection: "row", justifyContent: 'space-around', alignItems: 'stretch', padding: '5%', paddingBottom: 20}}>
                                 <Text>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. {'\n\n\n'}
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                                    Most components can be customized when they are created, with different parameters. These creation parameters are called <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>props</Text>.{'\n\n'}
+                                    For example, one basic React Native component is the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>Image</Text>. When you create an image, you can use a prop named <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>source</Text> to control what image it shows.{'\n\n'}
+                                    Your own components can also use <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>props</Text>. This lets you make a single component that is used in many different places in your app, with slightly different properties in each place. Just refer to <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>this.props</Text> in your <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>render</Text> function. Here's an example:{'\n\n'}
+                                    <Text style={{fontFamily: 'monospace', fontSize: 10}}>
+                                        import React, {'{'} Component {'}'} from 'react';{'\n'}
+                                        import {'{'} AppRegistry, Text , View {'}'} from 'react-native';{'\n'}
+                                        class Greeting extends Component {'{\n'}
+                                        {'  '}render() {'{\n'}
+                                        {'    '}return ( {'\n'}
+                                        {'      <Text>'}Hello {'{'}this.props.name{'}'}!{'</Text>\n'}
+                                        {'    '}); {'\n'}
+                                        {'  }\n'}
+                                        {'}\n\n'}
+                                        export default class LotsOfGreetings extends Component {'{\n'}
+                                        {'  '}render() {'{\n'}
+                                        {'    '}return ( {'\n'}
+                                        {'      <View style='}{'{{'}alignItems: 'center'{'}}>\n'}
+                                        {'        <Greeting name=>'}'Rexxar' {'/>\n'}
+                                        {'        <Greeting name=>'}'Jaina' {'/>\n'}
+                                        {'        <Greeting name=>'}'Valeera' {'/>\n'}
+                                        {'      </View>\n'}
+                                        {'    '}); {'\n'}
+                                        {'  }\n'}
+                                        {'}\n\n'}
+                                        AppRegistry.registerComponent('AwesomeProject', () => LotsOfGreetings);{'\n\n'}
+                                    </Text>
+                                    Using <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>name</Text> as a prop lets us customize the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>Greeting</Text> component, so we can reuse that component for each of our greetings. This example also uses the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>Greeting</Text> component in JSX, just like the built-in components. The power to do this is what makes React so cool - if you find yourself wishing that you had a different set of UI primitives to work with, you just invent new ones.{'\n\n'}
+                                    The other new thing going on here is the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>View</Text> component. A <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>View</Text> is useful as a container for other components, to help control style and layout. With <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>props</Text> and the basic <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>Text</Text>, <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>Image</Text>, and <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>View</Text> components, you can build a wide variety of static screens.
                                 </Text>
                             </View>
                         </Content>
