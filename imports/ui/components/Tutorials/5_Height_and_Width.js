@@ -64,10 +64,10 @@ export default class Height_and_Width extends Component {
                                         AppRegistry.registerComponent('AwesomeProject', () => FixedDimensionsBasics);{'\n\n'}
                                     </Text>
                                     Setting dimensions this way is common for components that should always render at exactly the same size, regardless of screen dimensions.{'\n\n'}
-                                        <Text style={{fontWeight:'bold'}}>Flex Dimensions :</Text>{'\n\n'}
-                                        Use <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex</Text> in a component{'\''}s style to have the component expand and shrink dynamically based on available space. Normally you will use <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex: 1</Text>, which tells a component to fill all available space, shared evenly amongst each other component with the same parent. The larger the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex</Text> given, the higher the ratio of space a component will take compared to its siblings.{'\n\n'}
-                                        A component can only expand to fill available space if its parent has dimensions greater than 0. If a parent does not have either a fixed <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>width</Text> and <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>height</Text> or <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex</Text>, the parent will have dimensions of 0 and the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex</Text> children will not be visible.{'\n\n'}
-                                        <Text style={{fontFamily: 'monospace', fontSize: 10}}>
+                                    <Text style={{fontWeight:'bold'}}>Flex Dimensions :</Text>{'\n\n'}
+                                    Use <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex</Text> in a component{'\''}s style to have the component expand and shrink dynamically based on available space. Normally you will use <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex: 1</Text>, which tells a component to fill all available space, shared evenly amongst each other component with the same parent. The larger the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex</Text> given, the higher the ratio of space a component will take compared to its siblings.{'\n\n'}
+                                    A component can only expand to fill available space if its parent has dimensions greater than 0. If a parent does not have either a fixed <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>width</Text> and <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>height</Text> or <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex</Text>, the parent will have dimensions of 0 and the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>flex</Text> children will not be visible.{'\n\n'}
+                                    <Text style={{fontFamily: 'monospace', fontSize: 10}}>
                                         import React, {'{'} Component {'}'} from 'react';{'\n'}
                                         import {'{'} AppRegistry , View {'}'} from 'react-native';{'\n'}
                                         export default class FlexDimensionsBasics extends Component {'{\n'}                                        
@@ -100,7 +100,7 @@ export default class Height_and_Width extends Component {
                         <View style={{flex: 1, flexDirection: "row", justifyContent: 'flex-end', alignItems: 'flex-end', paddingBottom: '7%', paddingTop:'2%'}}>
                             <Button success style={{borderRadius: 8}}  onPress={() => {
                                     click.play();
-                                    navigate('Flexbox');
+                                    navigate('Layout_with_Flexbox');
                                 }
                             }>
                                 <Text>Next</Text>

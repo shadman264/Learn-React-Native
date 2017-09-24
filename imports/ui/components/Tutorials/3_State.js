@@ -47,7 +47,7 @@ export default class State extends Component {
                                 <Text>
                                     There are two types of data that control a component: <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>props</Text> and <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>state</Text>. <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>props</Text> are set by the parent and they are fixed throughout the lifetime of a component. For data that is going to change, we have to use <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>state</Text>.{'\n\n'}
                                     In general, you should initialize <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>state</Text> in the constructor, and then call <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>setState</Text> when you want to change it.{'\n\n'}
-                                    For example, let's say we want to make text that blinks all the time. The text itself gets set once when the blinking component gets created, so the text itself is a <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>prop</Text>. The "whether the text is currently on or off" changes over time, so that should be kept in <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>state</Text>.{'\n\n'}
+                                    For example, let{'\''}s say we want to make text that blinks all the time. The text itself gets set once when the blinking component gets created, so the text itself is a <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>prop</Text>. The "whether the text is currently on or off" changes over time, so that should be kept in <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>state</Text>.{'\n\n'}
                                     <Text style={{fontFamily: 'monospace', fontSize: 10}}>
                                         import React, {'{'} Component {'}'} from 'react';{'\n'}
                                         import {'{'} AppRegistry, Text , View {'}'} from 'react-native';{'\n'}
@@ -60,7 +60,8 @@ export default class State extends Component {
                                         {'      '}this.setState(previousState => {'{\n'}
                                         {'        '}return {'{ showText: !previousState.showText };'}{'\n'}
                                         {'      '}{'});\n'}
-                                        {'    '}{'}, 1000);\n\n'}
+                                        {'    '}{'}, 1000);\n'}
+                                        {'  }\n\n'}
                                         
                                         {'  '}render() {'{\n'}
                                         {'    '}let display = this.state.showText?this.props.text:' ';{'\n'}
@@ -82,7 +83,7 @@ export default class State extends Component {
                                         {'}\n\n'}
                                         AppRegistry.registerComponent('AwesomeProject', () => BlinkApp);{'\n\n'}
                                     </Text>
-                                    In a real application, you probably won't be setting state with a timer. You might set state when you have new data arrive from the server, or from user input. You can also use a state container like <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://redux.js.org/index.html')}>Redux</Text> to control your data flow. In that case you would use Redux to modify your state rather than calling <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>setState</Text> directly.{'\n\n'}
+                                    In a real application, you probably won{'\''}t be setting state with a timer. You might set state when you have new data arrive from the server, or from user input. You can also use a state container like <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://redux.js.org/index.html')}>Redux</Text> to control your data flow. In that case you would use Redux to modify your state rather than calling <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>setState</Text> directly.{'\n\n'}
                                     When setState is called, BlinkApp will re-render its Component. By calling setState within the Timer, the component will re-render every time the Timer ticks.{'\n\n'}
                                     State works the same way as it does in React, so for more details on handling state, you can look at the <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://facebook.github.io/react/docs/react-component.html')}>React.Component API</Text>.
                                 </Text>

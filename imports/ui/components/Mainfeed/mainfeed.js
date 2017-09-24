@@ -85,10 +85,9 @@ export default class mainfeed extends Component {
                     <Feedcard title1='0. Getting Started' title2='1. Learn the Basics' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='2. Props' title2='3. State' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='4. Styling' title2='5. Height and Width' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='6. Flexbox' title2='7. ListView' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='8. Layout with Flexbox' title2='9. Handling Text Input' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='10. Handling Touches' title2='11. Using a ScrollView' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='12. Using List Views' title2='13. Networking' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='6. Layout with Flexbox' title2='7. Handling Text Input' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='8. Handling Touches' title2='9. Using a ScrollView' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='10. Using a ListView' title2='11. Networking' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='14. Intro to Native Base' title2='15. Anatomy' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='16. ActionSheet' title2='17. Badge' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='18. Button' title2='19. Card' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
