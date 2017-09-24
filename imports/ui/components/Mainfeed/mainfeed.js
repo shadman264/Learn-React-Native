@@ -88,19 +88,19 @@ export default class mainfeed extends Component {
                     <Feedcard title1='6. Layout with Flexbox' title2='7. Handling Text Input' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='8. Handling Touches' title2='9. Using a ScrollView' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='10. Using a ListView' title2='11. Networking' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='14. Intro to Native Base' title2='15. Anatomy' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='16. ActionSheet' title2='17. Badge' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='18. Button' title2='19. Card' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='20. Deck Swipper' title2='21. FABs' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='22. Footer Tabs' title2='23. Form' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='24. Header' title2='25. Icon' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='26. Layout' title2='27. List' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='28. Picker' title2='29. Radio Button' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='30. Search Bar' title2='31. Segment' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='32. Spinner' title2='33. Swipable List' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='34. Tabs' title2='35. Thumbnail' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='36. Toast' title2='37. Typography' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='38. Navigation' title2='39. Drawer' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='12. Intro to Native Base' title2='13. Anatomy' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='14. ActionSheet' title2='15. Badge' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='16. Button' title2='17. Card' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='18. Deck Swipper' title2='19. FABs' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='20. Footer Tabs' title2='21. Form' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='22. Header' title2='23. Icon' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='24. Layout' title2='25. List' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='26. Picker' title2='27. Radio Button' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='28. Search Bar' title2='29. Segment' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='30. Spinner' title2='31. Swipable List' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='32. Tabs' title2='33. Thumbnail' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='34. Toast' title2='35. Typography' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='36. Navigation' title2='37. Drawer' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                 </Content>
         }
         return (
