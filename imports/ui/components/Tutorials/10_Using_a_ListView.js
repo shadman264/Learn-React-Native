@@ -65,7 +65,7 @@ export default class ListView extends Component {
                                         {'           ]}\n'}                                 
                                         {'         renderItem={({item}) => <Text>{item.key}</Text>}\n'}
                                         {'         />\n'} 
-                                        {'      </View\n'}
+                                        {'      </View>\n'}
                                         {'    '}); {'\n'}
                                         {'  }\n'}
                                         {'}\n\n'}

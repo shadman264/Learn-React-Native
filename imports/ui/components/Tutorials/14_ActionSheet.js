@@ -45,40 +45,43 @@ export default class ActionSheet extends Component {
                             </View>
                             <View style={{ flex: 1, flexDirection: "row", justifyContent: 'space-around', alignItems: 'stretch', padding: '5%', paddingBottom: 20}}>
                                 <Text>
-                                    <Text style={{fontWeight: 'bold', fontSize: 18}}>Handling Touches</Text>{'\n\n'}
-                                    Users interact with mobile apps mainly through touch. They can use a combination of gestures, such as tapping on a button, scrolling a list, or zooming on a map. React Native provides components to handle all sorts of common gestures. One component you will most likely be interested in is the basic Button.{'\n\n'}
-                                    <Text style={{fontWeight: 'bold', fontSize: 18}}>Displaying a basic button</Text>{'\n\n'}
-                                    <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://facebook.github.io/react-native/docs/button.html')}>Button</Text> provides a basic button component that is rendered nicely on all platforms. The minimal example to display a button looks like this:{'\n\n'}
-                                    <Text style={{fontFamily: 'monospace', fontSize: 10}}>
-                                        {'<Button\n'}
-                                        {'  onPress={() => { Alert.alert('}'You tapped the button!'{')}}\n'}
-                                        {'  title='}"Press Me"{'\n'}
-                                        />{'\n\n'}
-                                    </Text>
-                                    This will render a blue label on iOS, and a blue rounded rectangle with white text on Android. Pressing the button will call the "onPress" function, which in this case displays an alert popup. If you like, you can specify a "color" prop to change the color of your button.{'\n\n'}
-                                    <Text style={{fontWeight: 'bold', fontSize: 18}}>Touchables</Text>{'\n\n'}
-                                    If the basic button doesn{'\''}t look right for your app, you can build your own button using any of the "Touchable" components provided by React Native. The "Touchable" components provide the capability to capture tapping gestures, and can display feedback when a gesture is recognized. These components do not provide any default styling.{'\n\n'}
-                                    Which "Touchable" component you use will depend on what kind of feedback you want to provide:{'\n\n'}
-                                    <Text>{'\u2022  '}Generally, you can use <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://facebook.github.io/react-native/docs/touchablehighlight.html')}>TouchableHighlight</Text> anywhere you would use a button or link on web. The view{'\''}s background will be darkened when the user presses down on the button.{'\n\n'}</Text>
-                                    <Text>{'\u2022  '}You may consider using <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://facebook.github.io/react-native/docs/touchablenativefeedback.html')}>TouchableNativeFeedback</Text> on Android to display ink surface reaction ripples that respond to the user{'\''}s touch.{'\n\n'}</Text>
-                                    <Text>{'\u2022  '}<Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://facebook.github.io/react-native/docs/touchableopacity.html')}>TouchableOpacity</Text> can be used to provide feedback by reducing the opacity of the button, allowing the background to be seen through while the user is pressing down.{'\n\n'}</Text>
-                                    <Text>{'\u2022  '}If you need to handle a tap gesture but you don{'\''}t want any feedback to be displayed, use <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://facebook.github.io/react-native/docs/touchablewithoutfeedback.html')}>TouchableWithoutFeedback</Text>.{'\n\n'}</Text>
-                                    In some cases, you may want to detect when a user presses and holds a view for a set amount of time. These long presses can be handled by passing a function to the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>onLongPress</Text> props of any of the "Touchable" components.{'\n\n'}
-                                    <Text style={{fontFamily: 'monospace', fontSize: 10}}>
-                                        {'<TouchableHighlight onPress={this._onPressButton} \n            onLongPress={this._onLongPressButton} \n                           underlayColor='}"white"{'>\n'}
-                                        {'   <View style={styles.button}>'}{'\n'}
-                                        {'       <Text style={styles.buttonText}>\n          TouchableHighlight\n      </Text>'}{'\n'}
-                                        {'   </View>'}{'\n'}
-                                        {'</TouchableHighlight>\n\n'}
+                                    NativeBase ActionSheet is a wrapper around the React Native <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://facebook.github.io/react-native/releases/0.44/docs/actionsheetios.html')}>ActionSheetIOS</Text> component. {'\n\n'}
+                                    <Text style={{fontStyle: 'italic'}}>General Syntax{'\n\n'}</Text>
 
-                                        {'_onPressButton() {\n'}
-                                        {'  Alert.alert('}'You tapped the button!'{')\n'}
+                                    <Text style={{fontFamily: 'monospace', fontSize: 10}}>
+                                        {'import React, { Component } from \'react\';\n'}
+                                        {'import { Container, Header, Button, Content, ActionSheet,\n                              Text} from \'native-base\';\n'}
+                                        {'var BUTTONS = ["Option 0", "Option 1", "Option 2", \n              "Delete", "Cancel"];\n'}
+                                        {'var DESTRUCTIVE_INDEX = 3;\n'}
+                                        {'var CANCEL_INDEX = 4;\n'}
+                                        {'export default class ActionSheetExm extends Component {\n'}
+                                        {'  '}render() {'{\n'}
+                                        {'    '}return ( {'\n'}
+                                        {'      <Container>\n'}
+                                        {'         <Header />\n'}
+                                        {'         <Content padder>\n'}
+                                        {'           <Button\n'}
+                                        {'             onPress={() =>\n'}
+                                        {'             ActionSheet.show(\n'}
+                                        {'               {\n'}
+                                        {'                 options: BUTTONS,\n'}
+                                        {'                 cancelButtonIndex: CANCEL_INDEX,\n'}
+                                        {'                 destructiveButtonIndex:\n                        DESTRUCTIVE_INDEX,\n'}
+                                        {'                 title: "Testing ActionSheet"\n'}
+                                        {'               },\n'}
+                                        {'               buttonIndex => {\n'}
+                                        {'                 this.setState({ clicked: \n                      BUTTONS[buttonIndex] });\n'}
+                                        {'               },\n'}
+                                        {'             )}\n'}
+                                        {'           >\n'}
+                                        {'             <Text>Actionsheet</Text>\n'}
+                                        {'           </Button>\n'}
+                                        {'         </Content>\n'}
+                                        {'      </Container>\n'}
+                                        {'    '}); {'\n'}
+                                        {'  }\n'}
                                         {'}\n\n'}
-
-                                        {'_onLongPressButton() {\n'}
-                                        {'  Alert.alert('}'You long tapped the button!'{')\n'}
-                                        {'}\n\n'}
-                                    </Text>
+                                    </Text>                                    
                                 </Text>
                             </View>
                         </Content>

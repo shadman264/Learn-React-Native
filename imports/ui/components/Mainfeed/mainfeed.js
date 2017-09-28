@@ -90,7 +90,7 @@ export default class mainfeed extends Component {
                     <Feedcard title1='10. Using a ListView' title2='11. Networking' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='12. Intro to Native Base' title2='13. Anatomy' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='14. ActionSheet' title2='15. Badge' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
-                    <Feedcard title1='16. Button' title2='17. Card' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
+                    <Feedcard title1='16. Buttons' title2='17. Cards' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='18. Deck Swipper' title2='19. FABs' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='20. Footer Tabs' title2='21. Form' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>
                     <Feedcard title1='22. Header' title2='23. Icon' color1='unlocked' color2='unlocked' pressFunc={this.handleNavigation.bind(this)}/>

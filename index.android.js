@@ -20,7 +20,7 @@ import Anatomy from './imports/ui/components/Tutorials/13_Anatomy';
 import ActionSheet from './imports/ui/components/Tutorials/14_ActionSheet';
 import Badge from './imports/ui/components/Tutorials/15_Badge';
 import Buttons from './imports/ui/components/Tutorials/16_Buttons';
-import Card from './imports/ui/components/Tutorials/17_Card';
+import Cards from './imports/ui/components/Tutorials/17_Cards';
 import Deck_Swipper from './imports/ui/components/Tutorials/18_Deck_Swipper';
 import FABs from './imports/ui/components/Tutorials/19_FABs';
 import Footer_Tabs from './imports/ui/components/Tutorials/20_Footer_Tabs';
@@ -62,7 +62,7 @@ const LearnReactNative = StackNavigator({
         ActionSheet: { screen: ActionSheet },
         Badge: { screen: Badge },
         Buttons: { screen: Buttons },
-        Card: { screen: Card },
+        Cards: { screen: Cards },
         Deck_Swipper: { screen: Deck_Swipper },
         FABs: { screen: FABs },
         Footer_Tabs: { screen: Footer_Tabs },

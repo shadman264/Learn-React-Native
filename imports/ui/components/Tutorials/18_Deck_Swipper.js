@@ -4,7 +4,7 @@ import { Container, Header, Body, Right, Button, Icon, Title, Card, CardItem, Te
 import Icon5 from 'react-native-vector-icons/FontAwesome';
 import Sound from 'react-native-sound';
 
-export default class Intro_to_Native_Base extends Component {
+export default class Deck_Swipper extends Component {
 
     static navigationOptions = {
         header: null
@@ -28,7 +28,7 @@ export default class Intro_to_Native_Base extends Component {
                     <Button transparent><Icon name='arrow-back' /></Button>
                     <Body>
                         <Title style={{paddingLeft: '7%'}}>
-                            12. Intro to Native_Base
+                            18. Deck Swipper
                         </Title>
                     </Body>
                 </Header>
@@ -40,7 +40,7 @@ export default class Intro_to_Native_Base extends Component {
                                 <Text style={{paddingTop:'4%', color:'#0277BD', fontFamily: 'sans-serif-condensed'}}>React Native</Text> 
                             </View>
                             <View style={{ flex: 1, flexDirection: "row", justifyContent: 'space-around', alignItems: 'stretch', paddingBottom: 20}}>
-                                <Text style={{paddingTop:'0%', color:'#0288D1', fontWeight: 'bold', fontSize: 24}}>Intro to Native_Base</Text>
+                                <Text style={{paddingTop:'0%', color:'#0288D1', fontWeight: 'bold', fontSize: 24}}>Deck Swipper</Text>
                             </View>
                             <View style={{ flex: 1, flexDirection: "row", justifyContent: 'space-around', alignItems: 'stretch', padding: '5%', paddingBottom: 20}}>
                                 <Text>
@@ -75,8 +75,8 @@ export default class Intro_to_Native_Base extends Component {
                         </View>
                         <View style={{flex: 1, flexDirection: "row", justifyContent: 'flex-end', alignItems: 'flex-end', paddingBottom: '7%', paddingTop:'2%'}}>
                             <Button success style={{borderRadius: 8}}  onPress={() => {
-                                    // click.play();
-                                    // navigate('Layout_with_Flexbox');
+                                    click.play();
+                                    navigate('FABs');
                                 }
                             }>
                                 <Text>Next</Text>

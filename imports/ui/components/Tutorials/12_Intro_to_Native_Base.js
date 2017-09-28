@@ -28,7 +28,7 @@ export default class Intro_to_Native_Base extends Component {
                     <Button transparent><Icon name='arrow-back' /></Button>
                     <Body>
                         <Title style={{paddingLeft: '7%'}}>
-                            12. Intro to Native_Base
+                            12. Intro to Native Base
                         </Title>
                     </Body>
                 </Header>
@@ -40,7 +40,7 @@ export default class Intro_to_Native_Base extends Component {
                                 <Text style={{paddingTop:'4%', color:'#0277BD', fontFamily: 'sans-serif-condensed'}}>React Native</Text> 
                             </View>
                             <View style={{ flex: 1, flexDirection: "row", justifyContent: 'space-around', alignItems: 'stretch', paddingBottom: 20}}>
-                                <Text style={{paddingTop:'0%', color:'#0288D1', fontWeight: 'bold', fontSize: 24}}>Intro to Native_Base</Text>
+                                <Text style={{paddingTop:'0%', color:'#0288D1', fontWeight: 'bold', fontSize: 24}}>Intro to Native Base</Text>
                             </View>
                             <View style={{ flex: 1, flexDirection: "row", justifyContent: 'space-around', alignItems: 'stretch', padding: '5%', paddingBottom: 20}}>
                                 <Text>

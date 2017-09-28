@@ -116,7 +116,7 @@ export default class Buttons extends Component {
                         <View style={{flex: 1, flexDirection: "row", justifyContent: 'flex-end', alignItems: 'flex-end', paddingBottom: '7%', paddingTop:'2%'}}>
                             <Button success style={{borderRadius: 8}}  onPress={() => {
                                     click.play();
-                                    navigate('Card');
+                                    navigate('Cards');
                                 }
                             }>
                                 <Text>Next</Text>

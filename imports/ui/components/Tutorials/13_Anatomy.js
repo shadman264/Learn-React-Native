@@ -44,37 +44,55 @@ export default class Anatomy extends Component {
                             </View>
                             <View style={{ flex: 1, flexDirection: "row", justifyContent: 'space-around', alignItems: 'stretch', padding: '5%', paddingBottom: 20}}>
                                 <Text>
-                                    <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>TextInput</Text> is a basic component that allows the user to enter text. It has an <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>onChangeText</Text> prop that takes a function to be called every time the text changed, and an <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>onSubmitEditing</Text> prop that takes a function to be called when the text is submitted.{'\n\n'}
-                                    For example, let's say that as the user types, you're translating their words into a different language. In this new language, every single word is written the same way: <Text style={{fontFamily: 'monospace'}}>'bla'</Text>. So the sentence <Text style={{fontFamily: 'monospace'}}>"Hello there Bob"</Text> would be translated as <Text style={{fontFamily: 'monospace'}}>"bla bla bla"</Text>.{'\n\n'}
+                                    A common way to use NativeBase screen structure is to have all the components within <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'<Container>\n\n'}</Text>
+                                    
                                     <Text style={{fontFamily: 'monospace', fontSize: 10}}>
-                                        import React, {'{'} Component {'}'} from 'react';{'\n'}
-                                        import {'{'} AppRegistry, Text, TextInput, View {'}'}{'\n                        '} from 'react-native';{'\n'}
-                                        export default class BlaTranslator extends Component {'{\n'}
-                                        {'  '}constructor(props) {'{\n'}
-                                        {'    '}super(props);{'\n'}
-                                        {'    '}this.state = {'{'}text: {'\'\'};\n'}
-                                        {'  }\n\n'}
-                                        
+                                        {'import React, { Component } from \'react\';\n'}
+                                        {'import { Container, Header, Content, Footer} \n                         from \'native-base\';\n'}
+                                        {'export default class AnatomyExample extends Component {\n'}
                                         {'  '}render() {'{\n'}
                                         {'    '}return ( {'\n'}
-                                        {'      <View style={{padding: 10}}>\n'}
-                                        {'        <TextInput\n'}
-                                        {'          style={{height: 40}}\n'}
-                                        {'          placeholder=\"Type here to translate!\"\n'}
-                                        {'          onChangeText={(text) => this.setState({text})}\n'}
-                                        {'        />\n'}    
-                                        {'        <Text style={{padding: 10, fontSize: 42}}>\n'}
-                                        {'          {this.state.text.split(\' \').map((word) => '}{'\n                          '}{'word && \'bla\').join(\' \')}\n'}
-                                        {'        </Text>\n'}
-                                        {'      </View\n'}
+                                        {'      <Container>\n'}
+                                        {'         <Header></Header>\n'}
+                                        {'         <Content></Content>\n'}
+                                        {'         <Footer></Footer>\n'}
+                                        {'      </Container>\n'}
                                         {'    '}); {'\n'}
                                         {'  }\n'}
                                         {'}\n\n'}
-                        
-                                        AppRegistry.registerComponent('AwesomeProject', () => BlaTranslator);{'\n\n'}
                                     </Text>
-                                    In this example, we store <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>text</Text> in the state, because it changes over time.{'\n\n'}
-                                    There are a lot more things you might want to do with a text input. For example, you could validate the text inside while the user types. For more detailed examples, see the <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://facebook.github.io/react/docs/forms.html')}>React docs on controlled components</Text>, or the <Text style={{color: 'blue'}} onPress={() => Linking.openURL('http://facebook.github.io/react-native/docs/textinput.html')}>reference docs for TextInput</Text>.
+                                        Container comes with its predefined stylesheet, with an added advantage of accepting user-defined styles. It takes mainly three components: <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'<Header>'}</Text> , <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'<Content>'}</Text> and <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'<Footer>'}</Text> .{'\n\n'}
+
+                                    <Text style={{fontWeight: 'bold'}}>Header Anatomy{'\n\n'}</Text>
+                                    Usage of Container{'\''}s <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'Header'}</Text> component is very similar to your HTML <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'<head>'}</Text>. The header is divided into three parts. Components within <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'<Left>'}</Text> tag is displayed in the left side of the header, for <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'<Body>'}</Text> tag it is middle and for <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'<Right>'}</Text> , it is right part of the header.{'\n\n'}
+                                    <Text style={{fontFamily: 'monospace', fontSize: 10}}>
+                                        {'<Header>\n'}
+                                        {'   <Left></Left>\n'}
+                                        {'   <Body></Body>\n'}
+                                        {'   <Right></Right>\n'}
+                                        {'</Header>\n\n'}
+                                    </Text>
+
+                                    <Text style={{fontWeight: 'bold'}}>Content Anatomy{'\n\n'}</Text>
+                                    This is a NativeBase component which renders as body element of your screen. Each screen can have only one <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'Content'}</Text> component and can be defined anywhere within the <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'Container'}</Text> . Content takes in the whole collection of React Native and NativeBase components. It replaces <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'ScrollView'}</Text> . {'\n\n'}
+
+                                    <Text style={{fontWeight: 'bold'}}>Footer Anatomy{'\n\n'}</Text>
+                                    Usage of Container{'\''}s <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'Footer'}</Text> component is very similar to your HTML <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'<footer>'}</Text> . There can be only a single Footer component into your Container. To have <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'Footer'}</Text> for your screen, include Footer component within <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'Container'}</Text> . Footer takes input as: <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'FooterTab'}</Text> . The components those are defined within Footer will be rendered in the same order that you define them.{'\n\n'}
+                                    <Text style={{fontFamily: 'monospace', fontSize: 10}}>
+                                        {'<Container>\n'}
+                                        {'   <Header />\n'}
+                                        {'   <Content />\n'}
+                                        {'   <Footer>\n'}
+                                        {'     <FooterTab>\n'}
+                                        {'       <Button full>\n'}
+                                        {'         <Text>Footer</Text>\n'}
+                                        {'       </Button>\n'}
+                                        {'     </FooterTab>\n'}
+                                        {'   </Footer>\n'}
+                                        {'</Container>\n\n'}
+                                    </Text> 
+                                    It replaces React Native <Text style={{backgroundColor:'#e8e6e4', fontFamily: 'monospace'}}>{'View'}</Text>
+
                                 </Text>
                             </View>
                         </Content>
